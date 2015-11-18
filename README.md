@@ -3,7 +3,7 @@ D3 Water Drop Chart is a very simple chart created with a single stacked bar cha
 
 ## Sample
 
-![D3 Water Drop Chart Sample](https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/src/d3_water_drop_transparent.png)
+![D3 Water Drop Chart Sample](https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/docs/d3_water_drop_transparent_sample.png)
 
 
 # Usage
