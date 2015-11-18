@@ -8,13 +8,13 @@ D3 Water Drop Chart is a very simple chart created with a single stacked bar cha
 
 # Usage
 
-Define HTMl chart container
-```
+Define HTML chart container
+```html
 <div class='water-drop-chart-container'></div>
 ```
 
 JavaScript initialize chart
-```
+```javascript
 <script language="javascript">
   startWaterDropChart(".water-drop-chart-container", [
     [{
