@@ -5,8 +5,9 @@ D3 Water Drop Chart is a very simple chart created with a single stacked bar cha
 
 ![D3 Water Drop Chart Sample](https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/docs/d3_water_drop_chart_sample.png)
 
+Have a look in this [codepen](http://codepen.io/antonioams/pen/MaLdzX) to see it in action.
 
-# Usage
+## Usage
 
 Define HTML chart container
 ```html
@@ -41,3 +42,7 @@ JavaScript initialize chart
   ], 133, 190, "#6B486B")
 </script>
 ```
+
+## Dependencies
+
+* D3 version 3.5.*
