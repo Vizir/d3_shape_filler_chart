@@ -1,0 +1,31 @@
+{
+  "name": "d3_water_drop_chart",
+  "authors": [
+    "Antonio Anderson Souza <antonioams@gmail.com>",
+    "Vizir Software Studio <contato@vizir.com.br>"
+  ],
+  "description": "D3 Water Drop Chart, a very simple chart created with a single stacked bar chart inside a Water Drop body",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "d3",
+    "water",
+    "drop",
+    "drop",
+    "chart",
+    "stacked",
+    "chart"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.*"
+  }
+}
