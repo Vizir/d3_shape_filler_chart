@@ -1,0 +1,28 @@
+{
+  "name": "d3_water_drop_chart",
+  "version": "0.0.1",
+  "description": "D3 Water Drop Chart, a very simple chart created with a single stacked bar chart inside a Water Drop body",
+  "main": "",
+  "scripts": {
+    "install": "bower install",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "bower": "^1.5.3",
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0",
+    "gulp-less": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2"
+  }
+}
