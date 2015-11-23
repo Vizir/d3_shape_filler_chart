@@ -1,54 +1,61 @@
-var generateMarkup = function(container, data) {
-  var container = document.querySelector(container);
+var generateMarkup = function(container, data, width, height) {
+  var markupContainer        = document.querySelector(container),
+      legendsContainer = document.createElement("div"),
+      legendsList      = document.createElement("ul"),
+      waterDrop        = document.createElement("div"),
+      chart            = document.createElement("div");
 
-  var chart = document.createElement("div");
   chart.setAttribute('class', 'gallery');
   chart.setAttribute('id', 'chart');
-  container.appendChild(chart);
+  chart.setAttribute('style', 'height:' + height + 'px; width:' + width + 'px');
+  markupContainer.appendChild(chart);
 
-  var waterDrop = document.createElement("div");
-  waterDrop.setAttribute('id', 'water-drop');
-  container.appendChild(waterDrop);
+  setTimeout(function(){
+    waterDrop.setAttribute('id', 'water-drop');
+    waterDrop.setAttribute('style', 'background-size:' + (parseInt(width)-10) + 'px ' + (parseInt(height)-10) + 'px');
+    chart.appendChild(waterDrop);
+  }, 1);
 
-  var legendsContainer = document.createElement("div");
-  var legendsList = document.createElement("ul");
   legendsList.setAttribute('class', 'water-drop-legend-container');
+
   for(var i = 0; i < data.length; i++){
-    var legend = document.createElement("li");
 
+    var legend, legendContainer, percentContainer;
+
+    legend = document.createElement("li");
     legend.setAttribute('class', 'legend legend-' + i);
-
-    var legendContainer = document.createElement("div");
-    var percentContainer = document.createElement("span");
+    legendContainer = document.createElement("div");
+    percentContainer = document.createElement("span");
     percentContainer.appendChild(document.createTextNode(parseInt(data[i][0].y * 100) + "% "));
+    legendContainer.setAttribute('class', 'legends');
     legendContainer.appendChild(percentContainer);
     legendContainer.appendChild(document.createTextNode(data[i][0].label));
-
     legend.appendChild(legendContainer);
-
     legendsList.appendChild(legend);
   }
-  legendsContainer.appendChild(legendsList);
-  container.appendChild(legendsContainer);
-}
 
-var startWaterDropChart = function(container, data, width, height, mouseoverColor) {
-  var n = data.length, // number of layers
-    m = 1, // number of samples per layer
-    mouseoverColor = mouseoverColor,
-    data = data
-  generateMarkup(container, data);
+  legendsContainer.appendChild(legendsList);
+  markupContainer.appendChild(legendsContainer);
+};
+
+var startWaterDropChart = function(container, data, config) {
+  var n                    = data.length, // number of layers
+      m                    = 1, // number of samples per layer
+      chartMouseoverColor  = config.mouseoverColor,
+      chartData            = data;
+
+  generateMarkup(container, data, config.width, config.height);
 
   var p = 20,
-    w = width,
-    h = height - .5 - p,
-    mx = m,
-    my = d3.max(data, function(d) {
+      w = config.width,
+      h = config.height - 0.5 - p,
+      mx = m,
+      my = d3.max(chartData, function(d) {
       return d3.max(d, function(d) {
         return d.y0 + d.y;
       });
     }),
-    mz = d3.max(data, function(d) {
+    mz = d3.max(chartData, function(d) {
       return d3.max(d, function(d) {
         return d.y;
       });
@@ -72,7 +79,7 @@ var startWaterDropChart = function(container, data, width, height, mouseoverColo
     .attr("height", h + p);
 
   var layers = vis.selectAll("g.layer")
-    .data(data)
+    .data(chartData)
     .enter().append("svg:g")
     .style("stroke", "#fff")
     .style("stroke-width", 2)
@@ -97,7 +104,7 @@ var startWaterDropChart = function(container, data, width, height, mouseoverColo
       d3.select(this)
         .transition()
         .duration(250)
-        .style("fill", mouseoverColor);
+        .style("fill", chartMouseoverColor);
     })
     .on('mouseout', function(d, i) {
       d3.select(this)
@@ -108,7 +115,7 @@ var startWaterDropChart = function(container, data, width, height, mouseoverColo
 
   bars.append("svg:rect")
     .attr("width", x({
-      x: .9
+      x: 0.9
     }))
     .attr("x", 0)
     .attr("y", h)
@@ -122,13 +129,13 @@ var startWaterDropChart = function(container, data, width, height, mouseoverColo
       var items = document.querySelectorAll('.layer .bar rect');
       var height = 0.0;
       for (var i = items.length; i > 0; i--) {
-        var idx = i - 1
+        var idx = i - 1;
         document.querySelector('.legend-' + idx).setAttribute('style', 'top:' + (parseFloat(items[idx].getBoundingClientRect().top) + parseFloat(items[idx].getAttribute('height')) / 2) + 'px;');
         if (idx % 2) {
-          document.querySelector('.legend-' + idx).classList.add('odd')
+          document.querySelector('.legend-' + idx).classList.add('odd');
         } else {
-          document.querySelector('.legend-' + idx).classList.add('even')
+          document.querySelector('.legend-' + idx).classList.add('even');
         }
       }
     });
-}
+};
