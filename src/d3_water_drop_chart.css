@@ -1,5 +1,5 @@
 #water-drop {
-  background-image: url(d3_water_drop_transparent.png);
+  background-image: data-uri('image/svg+xml;charset=UTF-8', 'd3_water_drop_transparent.svg');
   width: 235px;
   height: 193px;
   position: relative;
