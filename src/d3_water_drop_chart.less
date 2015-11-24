@@ -1,50 +1,61 @@
 #water-drop {
-  background-image: data-uri('image/svg+xml;charset=UTF-8', 'd3_water_drop_transparent.svg');
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: data-uri("image/svg+xml;charset=UTF-8", "d3_water_drop_transparent.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-#chart{
+#chart {
   position: relative;
 }
 
 .water-drop-legend-container {
-  list-style: none;
+  padding: 0;
   margin: 0;
-  margin-left: 65px;
-  padding: 0px;
-  height: 193px;
+  list-style: none;
   pointer-events: none;
+  left: 50%;
+  position: absolute;
+  z-index: 9;
 }
 
 .water-drop-legend-container li {
-  width: 160px;
   position: absolute;
   pointer-events: none;
 }
 
 .water-drop-legend-container li div {
-  width: 100%;
-  text-align: right;
-  border-bottom: #000 dotted 1px;
-  color: #b1b1b1;
   margin-top: -18px;
   font-family: open-sans, helvetica;
-  font-weight: 100;
+  font-weight: normal;
+  text-align: right;
   text-transform: uppercase;
+  color: #b1b1b1;
+  border-bottom: #000 dotted 1px;
 }
 
-.water-drop-legend-container li.even div {
-  padding-left: 100px;
+.water-drop-legend-container li:nth-child(odd) div {
+  padding-left: 60px;
+}
+
+.water-drop-legend-container li div {
+  position: relative;
+}
+
+.water-drop-legend-container .legend div > span {
+  margin-left: 5%;
+  position: absolute;
+  white-space: nowrap;
+  top: -8px;
 }
 
 .water-drop-legend-container .legend span {
-  font-weight: 800;
   color: #b1b1b1;
+  font-size: 14px;
 }
+

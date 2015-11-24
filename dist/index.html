@@ -8,32 +8,34 @@
 <div class='water-drop-chart-container'>
 </div>
 <script language="javascript">
-  startWaterDropChart(".water-drop-chart-container", [
-    [{
-      x: 0,
-      y: 0.51,
-      y0: 0,
-      label: "diesel",
-      color: "#83ba43"
-    }],
-    [{
-      x: 0,
-      y: 0.21,
-      y0: 0.51,
-      label: "gasoline",
-      color: "#4370ba"
-    }],
-    [{
-      x: 0,
-      y: 0.28,
-      y0: 0.72,
-      label: "ethanol",
-      color: "#fbac1c"
-    }],
-  ], {
-    height: 450,
-    width: 300,
-    mouseoverColor: "#6B486B"
-  });
+  (function() {
+    startWaterDropChart(".water-drop-chart-container", [
+      [{
+        x: 0,
+        y: 0.51,
+        y0: 0,
+        label: "diesel",
+        color: "#83ba43"
+      }],
+      [{
+        x: 0,
+        y: 0.21,
+        y0: 0.51,
+        label: "gasoline",
+        color: "#4370ba"
+      }],
+      [{
+        x: 0,
+        y: 0.28,
+        y0: 0.72,
+        label: "ethanol",
+        color: "#fbac1c"
+      }],
+    ], {
+      height: 300,
+      width: 200,
+      mouseoverColor: "#6B486B"
+    });
+  })();
 </script>
 </body>

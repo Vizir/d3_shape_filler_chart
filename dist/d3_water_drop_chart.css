@@ -1,44 +1,52 @@
 #water-drop {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3C%3Fxml%20version%3D%221.0%22%20standalone%3D%22no%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20viewBox%3D%220%200%20130%20190%22%20preserveAspectRatio%3D%22none%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xml%3Aspace%3D%22preserve%22%20style%3D%22fill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A1.41421%3B%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M134.988%2C-7.216L-5.014%2C-7.216L-5.014%2C195.788L134.988%2C195.788L134.988%2C-7.216ZM64.246%2C11.402C64.246%2C11.402%2012.475%2C93.223%2012.475%2C128.975C12.475%2C164.728%2046.702%2C177.641%2064.246%2C177.641C81.79%2C177.641%20117.727%2C164.626%20117.74%2C128.975C117.753%2C92.527%2064.246%2C11.402%2064.246%2C11.402Z%22%20style%3D%22fill%3Awhite%3B%22%2F%3E%0A%3C%2Fsvg%3E%0A");
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3C%3Fxml%20version%3D%221.0%22%20standalone%3D%22no%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20viewBox%3D%220%200%20130%20190%22%20preserveAspectRatio%3D%22none%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xml%3Aspace%3D%22preserve%22%20style%3D%22fill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A1.41421%3B%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M134.988%2C-7.216L-5.014%2C-7.216L-5.014%2C195.788L134.988%2C195.788L134.988%2C-7.216ZM64.246%2C11.402C64.246%2C11.402%2012.475%2C93.223%2012.475%2C128.975C12.475%2C164.728%2046.702%2C177.641%2064.246%2C177.641C81.79%2C177.641%20117.727%2C164.626%20117.74%2C128.975C117.753%2C92.527%2064.246%2C11.402%2064.246%2C11.402Z%22%20style%3D%22fill%3Awhite%3B%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 #chart {
   position: relative;
 }
 .water-drop-legend-container {
-  list-style: none;
+  padding: 0;
   margin: 0;
-  margin-left: 65px;
-  padding: 0px;
-  height: 193px;
+  list-style: none;
   pointer-events: none;
+  left: 50%;
+  position: absolute;
+  z-index: 9;
 }
 .water-drop-legend-container li {
-  width: 160px;
   position: absolute;
   pointer-events: none;
 }
 .water-drop-legend-container li div {
-  width: 100%;
-  text-align: right;
-  border-bottom: #000 dotted 1px;
-  color: #b1b1b1;
   margin-top: -18px;
   font-family: open-sans, helvetica;
-  font-weight: 100;
+  font-weight: normal;
+  text-align: right;
   text-transform: uppercase;
+  color: #b1b1b1;
+  border-bottom: #000 dotted 1px;
 }
-.water-drop-legend-container li.even div {
-  padding-left: 100px;
+.water-drop-legend-container li:nth-child(odd) div {
+  padding-left: 60px;
+}
+.water-drop-legend-container li div {
+  position: relative;
+}
+.water-drop-legend-container .legend div > span {
+  margin-left: 5%;
+  position: absolute;
+  white-space: nowrap;
+  top: -8px;
 }
 .water-drop-legend-container .legend span {
-  font-weight: 800;
   color: #b1b1b1;
+  font-size: 14px;
 }

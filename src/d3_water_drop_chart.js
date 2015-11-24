@@ -22,26 +22,29 @@
 
     for(var i = 0; i < data.length; i++){
 
-      var legend, legendContainer, percentContainer;
+      var legend, legendContainerWrapper, legendContainer, percentContainer, percentNumberContainer;
 
       legend = document.createElement("li");
       legend.setAttribute('class', 'legend legend-' + i);
-      legendContainer = document.createElement("div");
+      legendContainerWrapper = document.createElement("div");
+      legendContainer = document.createElement("span");
       percentContainer = document.createElement("span");
-      percentContainer.appendChild(document.createTextNode(parseInt(data[i][0].y * 100) + "% "));
-      legendContainer.setAttribute('class', 'legends');
+      percentNumberContainer = document.createElement("span");
+      legendContainerWrapper.appendChild(legendContainer);
+      percentNumberContainer.appendChild(document.createTextNode(parseInt(data[i][0].y * 100) + "% "));
+      percentContainer.appendChild(document.createTextNode(data[i][0].label));
+      legendContainer.appendChild(percentNumberContainer);
       legendContainer.appendChild(percentContainer);
-      legendContainer.appendChild(document.createTextNode(data[i][0].label));
-      legend.appendChild(legendContainer);
+      legendContainerWrapper.setAttribute('style', 'width:' + (parseInt(width/2)) + 'px ');
+      legend.appendChild(legendContainerWrapper);
       legendsList.appendChild(legend);
     }
 
-    legendsContainer.appendChild(legendsList);
-    markupContainer.appendChild(legendsContainer);
+    chart.appendChild(legendsList);
   };
 
-  var startWaterDropChart = function(container, data, config) {
-    var m = 1, // number of samples per layer
+  window.startWaterDropChart = function(container, data, config) {
+    var m = 1 // number of samples per layer
 
     generateMarkup(container, data, config.width, config.height);
 
@@ -122,11 +125,6 @@
         for (var i = items.length; i > 0; i--) {
           var idx = i - 1;
           document.querySelector('.legend-' + idx).setAttribute('style', 'top:' + (parseFloat(items[idx].getBoundingClientRect().top) + parseFloat(items[idx].getAttribute('height')) / 2) + 'px;');
-          if (idx % 2) {
-            document.querySelector('.legend-' + idx).classList.add('odd');
-          } else {
-            document.querySelector('.legend-' + idx).classList.add('even');
-          }
         }
       });
   };
