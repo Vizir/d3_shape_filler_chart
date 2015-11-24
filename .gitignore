@@ -31,6 +31,3 @@ logs
 pids
 *.pid
 *.seed
-
-#gulp
-dist
