@@ -5,11 +5,29 @@ D3 Water Drop Chart is a very simple chart created with a single stacked bar cha
 
 ![D3 Water Drop Chart Sample](https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/docs/d3_water_drop_chart_sample.png)
 
-Have a look in this [codepen](http://codepen.io/antonioams/pen/MaLdzX) to see it in action.
+Have a look in this [github page](http://vizir.github.io/d3_water_drop_chart/) to see it in action.
+
+## Getting Started
+
+Download the package, and include the dist/ng-content-editable.min.js file in your page.
+
+Via bower
+
+bower install d3_water_drop_chart --save
+
+Or via npm
+
+npm install d3_water_drop_chart --save
 
 ## Usage
 
-Define HTML chart container
+Include the Water Drop's Javascript and Stylesheet in your HTML
+```html
+<script src="d3_water_drop_chart.js" type="text/javascript"></script>
+<link href="d3_water_drop_chart.css"  rel="stylesheet" type="text/css">
+```
+
+Define HTML div to be the chart container
 ```html
 <div class='water-drop-chart-container'></div>
 ```
@@ -39,7 +57,11 @@ JavaScript initialize chart
       label: "ethanol",
       color: "#fbac1c"
     }],
-  ], 133, 190, "#6B486B")
+  ], {
+      width: 133,
+      height: 190,
+      mouseoverColor: "#6B486B"
+  })
 </script>
 ```
 
