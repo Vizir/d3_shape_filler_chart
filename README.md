@@ -5,6 +5,8 @@ D3 Water Drop Chart is a very simple chart created with a single stacked bar cha
 
 ![D3 Water Drop Chart Sample](https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/docs/d3_water_drop_chart_sample.png)
 
+![Github mascot Chart Sample](https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/docs/github-icon-sample.png)
+
 Have a look in this [github page](http://vizir.github.io/d3_water_drop_chart/) to see it in action.
 
 ## Getting Started
@@ -36,31 +38,29 @@ JavaScript initialize chart
 ```javascript
 <script language="javascript">
   startWaterDropChart(".water-drop-chart-container", [
-    [{
+    {
       x: 0,
       y: 0.51,
-      y0: 0,
       label: "diesel",
       color: "#83ba43"
-    }],
-    [{
+    },
+    {
       x: 0,
       y: 0.21,
-      y0: 0.51,
       label: "gasoline",
       color: "#4370ba"
-    }],
-    [{
+    },
+    {
       x: 0,
       y: 0.28,
-      y0: 0.72,
       label: "ethanol",
       color: "#fbac1c"
-    }],
+    }
   ], {
       width: 133,
       height: 190,
-      mouseoverColor: "#6B486B"
+      mouseoverColor: "#6B486B",
+      maskSvg: "github-icon.svg"
   })
 </script>
 ```

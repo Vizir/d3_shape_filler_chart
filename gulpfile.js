@@ -28,7 +28,7 @@ gulp.task('less', function() {
 });
 
 gulp.task('img', function() {
-  return gulp.src(['./src/d3_water_drop_transparent.svg', './src/d3_water_drop_transparent.png'])
+  return gulp.src(['./src/*.svg'])
     .pipe(gulp.dest('./dist'));
 });
 
