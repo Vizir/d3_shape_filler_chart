@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>D3 water drop chart by Vizir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">D3 water drop chart</h1>
+      <h2 class="project-tagline">D3 Water Drop Chart, a very simple chart created with a single stacked bar chart inside a Water Drop body</h2>
+      <a href="https://github.com/Vizir/d3_water_drop_chart" class="btn">View on GitHub</a>
+      <a href="https://github.com/Vizir/d3_water_drop_chart/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Vizir/d3_water_drop_chart/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="d3-water-drop-chart" class="anchor" href="#d3-water-drop-chart" aria-hidden="true"><span class="octicon octicon-link"></span></a>D3 Water Drop Chart</h1>
+
+<p>D3 Water Drop Chart is a very simple chart created with a single stacked bar chart inside a Water Drop body.</p>
+
+<h2>
+<a id="sample" class="anchor" href="#sample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample</h2>
+
+<p><img src="https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/docs/d3_water_drop_chart_sample.png" alt="D3 Water Drop Chart Sample"></p>
+
+<p>Have a look in this <a href="http://codepen.io/antonioams/pen/MaLdzX">codepen</a> to see it in action.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Define HTML chart container</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">'</span>water-drop-chart-container<span class="pl-pds">'</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>JavaScript initialize chart</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">&lt;</span>script language<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>javascript<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+  <span class="pl-en">startWaterDropChart</span>(<span class="pl-s"><span class="pl-pds">"</span>.water-drop-chart-container<span class="pl-pds">"</span></span>, [
+    [{
+      x<span class="pl-k">:</span> <span class="pl-c1">0</span>,
+      y<span class="pl-k">:</span> <span class="pl-c1">0.51</span>,
+      y0<span class="pl-k">:</span> <span class="pl-c1">0</span>,
+      label<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>diesel<span class="pl-pds">"</span></span>,
+      color<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#83ba43<span class="pl-pds">"</span></span>
+    }],
+    [{
+      x<span class="pl-k">:</span> <span class="pl-c1">0</span>,
+      y<span class="pl-k">:</span> <span class="pl-c1">0.21</span>,
+      y0<span class="pl-k">:</span> <span class="pl-c1">0.51</span>,
+      label<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>gasoline<span class="pl-pds">"</span></span>,
+      color<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#4370ba<span class="pl-pds">"</span></span>
+    }],
+    [{
+      x<span class="pl-k">:</span> <span class="pl-c1">0</span>,
+      y<span class="pl-k">:</span> <span class="pl-c1">0.28</span>,
+      y0<span class="pl-k">:</span> <span class="pl-c1">0.72</span>,
+      label<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>ethanol<span class="pl-pds">"</span></span>,
+      color<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#fbac1c<span class="pl-pds">"</span></span>
+    }],
+  ], <span class="pl-c1">133</span>, <span class="pl-c1">190</span>, <span class="pl-s"><span class="pl-pds">"</span>#6B486B<span class="pl-pds">"</span></span>)
+<span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li>D3 version 3.5.*</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Vizir/d3_water_drop_chart">D3 water drop chart</a> is maintained by <a href="https://github.com/Vizir">Vizir</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
