@@ -15,11 +15,9 @@ Download the package, and include the dist/ng-content-editable.min.js file in yo
 
 Via bower
 
+```shell
 bower install d3_water_drop_chart --save
-
-Or via npm
-
-npm install d3_water_drop_chart --save
+```
 
 ## Usage
 
