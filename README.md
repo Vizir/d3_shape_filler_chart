@@ -1,3 +1,5 @@
+![Code Climate Index](https://d3s6mut3hikguw.cloudfront.net/github/Vizir/d3_water_drop_chart/badges/gpa.svg)
+
 # D3 Water Drop Chart
 D3 Water Drop Chart is a very simple chart created with a single stacked bar chart inside a Water Drop body.
 
