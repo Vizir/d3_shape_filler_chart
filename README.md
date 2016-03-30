@@ -1,7 +1,7 @@
 ![Code Climate Index](https://d3s6mut3hikguw.cloudfront.net/github/Vizir/d3_water_drop_chart/badges/gpa.svg)
 
-# D3 Water Drop Chart
-D3 Water Drop Chart is a very simple chart created with a single stacked bar chart inside a Water Drop body.
+# D3 Shape Filler Chart
+D3 Shape Filler Chart is a very simple chart created with a single stacked bar chart inside a SVG shape body.
 
 ## Sample
 
@@ -18,26 +18,26 @@ Download the package, and include the dist/ng-content-editable.min.js file in yo
 Via bower
 
 ```shell
-bower install d3_water_drop_chart --save
+bower install d3_shape_filler_chart --save
 ```
 
 ## Usage
 
 Include the Water Drop's Javascript and Stylesheet in your HTML
 ```html
-<script src="d3_water_drop_chart.js" type="text/javascript"></script>
-<link href="d3_water_drop_chart.css"  rel="stylesheet" type="text/css">
+<script src="d3_shape_filler_chart.js" type="text/javascript"></script>
+<link href="d3_shape_filler_chart.css"  rel="stylesheet" type="text/css">
 ```
 
 Define HTML div to be the chart container
 ```html
-<div class='water-drop-chart-container'></div>
+<div class='shape-filler-chart-container'></div>
 ```
 
 JavaScript initialize chart
 ```javascript
 <script language="javascript">
-  startWaterDropChart(".water-drop-chart-container", [
+  startWaterDropChart(".shape-filler-chart-container", [
     {
       x: 0,
       y: 0.51,
