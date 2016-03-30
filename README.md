@@ -9,7 +9,7 @@ D3 Shape Filler Chart is a very simple chart created with a single stacked bar c
 
 ![Github mascot Chart Sample](https://raw.githubusercontent.com/Vizir/d3_water_drop_chart/master/docs/github-icon-sample.png)
 
-Have a look in this [github page](http://vizir.github.io/d3_water_drop_chart/) to see it in action.
+Have a look in this [github page](http://vizir.github.io/d3_shape_filler_chart/) to see it in action.
 
 ## Getting Started
 
