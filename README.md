@@ -1,4 +1,5 @@
-![Code Climate Index](https://d3s6mut3hikguw.cloudfront.net/github/Vizir/d3_shape_filler_chart/badges/gpa.svg)
+[![Code Climate](https://codeclimate.com/github/Vizir/d3_shape_filler_chart/badges/gpa.svg)](https://codeclimate.com/github/Vizir/d3_shape_filler_chart) [![Test Coverage](https://codeclimate.com/github/Vizir/d3_shape_filler_chart/badges/coverage.svg)](https://codeclimate.com/github/Vizir/d3_shape_filler_chart/coverage)
+
 
 # D3 Shape Filler Chart
 D3 Shape Filler Chart is a very simple chart created with a single stacked bar chart inside a SVG shape body.
