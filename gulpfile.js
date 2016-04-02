@@ -17,12 +17,12 @@ gulp.task('html', function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src(['./src/d3_water_drop_chart.js', './bower_components/d3/d3.min.js'])
+  return gulp.src(['./src/d3_shape_filler_chart.js', './bower_components/d3/d3.min.js'])
     .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('less', function() {
-  return gulp.src('./src/d3_water_drop_chart.less')
+  return gulp.src('./src/d3_shape_filler_chart.less')
     .pipe(less())
     .pipe(gulp.dest('./dist'));
 });
@@ -33,8 +33,8 @@ gulp.task('img', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./src/d3_water_drop_chart.js'], ['js']);
-  gulp.watch(['./src/d3_water_drop_chart.less'], ['less']);
+  gulp.watch(['./src/d3_shape_filler_chart.js'], ['js']);
+  gulp.watch(['./src/d3_shape_filler_chart.less'], ['less']);
   gulp.watch(['./index.html'], ['html']);
 });
 

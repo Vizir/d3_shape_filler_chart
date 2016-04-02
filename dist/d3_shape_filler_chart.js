@@ -11,9 +11,12 @@
 
   var generateY0 = function(data){
     var y0 = 0.0;
+    var x = 0.0
     for(var i = 0; i < data.length; i++){
+      data[i]['y'] = data[i].value;
       data[i]['y0'] = y0;
-      y0 += parseFloat(data[i].y);
+      data[i]['x'] = x;
+      y0 += parseFloat(data[i].value);
     }
     return data;
   }
@@ -22,7 +25,7 @@
     var markupContainer  = document.querySelector(container),
         legendsContainer = document.createElement("div"),
         legendsList      = document.createElement("ul"),
-        waterDrop        = document.createElement("div"),
+        shapeFiller        = document.createElement("div"),
         chart            = document.createElement("div");
 
     chart.setAttribute('class', 'gallery');
@@ -31,15 +34,15 @@
     markupContainer.appendChild(chart);
 
     setTimeout(function(){
-      waterDrop.setAttribute('id', 'water-drop');
+      shapeFiller.setAttribute('id', 'shape-filler');
       var style = 'background-size:' + width + 'px ' + height + 'px;'
       if(maskSvg)
         style += 'background-image: url(' + maskSvg + ');'
-      waterDrop.setAttribute('style', style);
-      chart.appendChild(waterDrop);
+      shapeFiller.setAttribute('style', style);
+      chart.appendChild(shapeFiller);
     }, 1);
 
-    legendsList.setAttribute('class', 'water-drop-legend-container');
+    legendsList.setAttribute('class', 'shape-filler-legend-container');
 
     for(var i = 0; i < data.length; i++){
 
@@ -58,13 +61,13 @@
       legendContainer.appendChild(percentContainer);
       legendContainerWrapper.setAttribute('style', 'width:' + (parseInt(width/2)) + 'px ');
       legend.appendChild(legendContainerWrapper);
-      legendsList.appendChild(legend);
+      if(data[i] && data[i][0].y) legendsList.appendChild(legend);
     }
 
     chart.appendChild(legendsList);
   };
 
-  window.startWaterDropChart = function(container, data, config) {
+  window.startShapeFillerChart = function(container, data, config) {
     var m = 1 // number of samples per layer
 
     var formatedData = formatDataObject(data);
@@ -146,7 +149,8 @@
         var height = 0.0;
         for (var i = items.length; i > 0; i--) {
           var idx = i - 1;
-          document.querySelector(container + ' .legend-' + idx).setAttribute('style', 'top:' + (parseFloat(items[idx].getBoundingClientRect().top - document.querySelector(container + " .water-drop-legend-container").getBoundingClientRect().top)  + parseFloat(items[idx].getAttribute('height')) / 2) + 'px;');
+          var containerLegend = document.querySelector(container + ' .legend-' + idx);
+		  if (containerLegend) containerLegend.setAttribute('style', 'top:' + (parseFloat(items[idx].getBoundingClientRect().top - document.querySelector(container + " .shape-filler-legend-container").getBoundingClientRect().top)  + parseFloat(items[idx].getAttribute('height')) / 2) + 'px;');
         }
       });
   };
