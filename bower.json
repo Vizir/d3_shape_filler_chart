@@ -1,17 +1,18 @@
 {
-  "name": "d3_water_drop_chart",
+  "name": "d3_shape_filler_chart",
   "authors": [
     "Antonio Anderson Souza <antonioams@gmail.com>",
     "Vizir Software Studio <contato@vizir.com.br>"
   ],
-  "description": "D3 Water Drop Chart, a very simple chart created with a single stacked bar chart inside a Water Drop body",
+  "description": "D3 Shape Filler Chart, a very simple chart created with a single stacked bar chart inside a SVg Shape",
   "main": "",
   "moduleType": [],
   "keywords": [
     "d3",
     "water",
     "drop",
-    "drop",
+    "shape",
+    "svg",
     "chart",
     "stacked",
     "chart"
