@@ -22,6 +22,12 @@ Via bower
 bower install d3_shape_filler_chart --save
 ```
 
+Via npm
+
+```shell
+npm install d3_shape_filler_chart
+```
+
 ## Usage
 
 Include the Shape Filler's Javascript and Stylesheet in your HTML
