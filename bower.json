@@ -5,7 +5,10 @@
     "Vizir Software Studio <contato@vizir.com.br>"
   ],
   "description": "D3 Shape Filler Chart, a very simple chart created with a single stacked bar chart inside a SVg Shape",
-  "main": "",
+  "main": [
+    "dist/d3_shape_filler_chart.js",
+    "dist/d3_shape_filler_chart.css"
+  ],
   "moduleType": [],
   "keywords": [
     "d3",
